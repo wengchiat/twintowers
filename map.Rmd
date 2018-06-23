@@ -1,0 +1,27 @@
+---
+title: "Tallest Twin Towers in the World - Kuala Lumpur Petronas Twin Towers"
+author: "W.C. NG"
+date: "23 June 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+library(dplyr)
+
+```
+
+## Overview
+Soaring to a height of 451.9 metres, the 88-storey twin structure is Kuala Lumpur's crown jewel. Majestic by day and dazzling at night, the PETRONAS Twin Towers is inspired by Tun Mahathir Mohamad's vision for Malaysia to be a global player. Together with master architect Cesar Pelli, the international icon powerfully captures the nation's ambitions and aspirations.
+
+*Source : https://www.petronastwintowers.com.my/about* 
+
+## Location
+```{r, fig.align='center', echo= FALSE}
+tallest_twintower <- leaflet() %>%
+    addTiles() %>% 
+    addMarkers(lat = 3.157509, lng = 101.712178)
+tallest_twintower
+```
+
